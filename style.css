@@ -1,0 +1,83 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 16px;
+    gap: 18px;
+}
+.item{
+    height: 150px;
+    width: 80%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 32px;
+}
+.texto{
+    color: red;
+    font-size: 64px;
+}
+.forma{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: 2s;
+}
+.vermelho{
+    background-color: red;
+}
+.circulo{
+    border-radius: 50%;
+}
+.tringulo{
+    width: 0px;
+    height: 0;
+    border-bottom: 100px solid #438bc8;
+    border-left: 50px solid transparent;
+    border-radius: 50px solid transparent;
+}
+.girar{
+    transform:rotate(360deg);
+}
+.imagem{
+    background-image: url(images.jfif);
+    background-size: cover;
+    transition: 1s;
+}
+.pulsando{
+    animation:pulse 1s ease-in-out infinite;
+    background-color: red;
+}
+@keyframes pulse{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+ }
+ .desaparecer{
+    opacity: 0;
+ }
+ .pular{
+    animation: jump 0.5s ease-in-out;
+ }
+ @keyframes jump{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-30px);
+    }
+    75%{
+        transform: translateY(30px);
+    }
+ }
